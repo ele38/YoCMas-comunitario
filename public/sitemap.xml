@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://localhost/main/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost/</loc>
   </url>
   
