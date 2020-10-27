@@ -3,6 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://localhost/</loc>
+  </url>
+  
+  <url>
     <loc>http://localhost/categories/</loc>
   </url>
   
@@ -16,10 +20,6 @@
   
   <url>
     <loc>http://localhost/tags/</loc>
-  </url>
-  
-  <url>
-    <loc>http://localhost/</loc>
   </url>
   
 </urlset>
