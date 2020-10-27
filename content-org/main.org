@@ -1,0 +1,252 @@
+#+TITLE: Estructuras de datos
+#+HUGO_BASE_DIR: /home/ele/cpp/yocmas-hugo/
+#+HUGO_SECTION: ./clases
+#+OPTIONS: toc:3
+* Estructuras lineales
+** Vectores
+------
+Los vectores son como arreglos, excepto de que el tamaño es dinámico, es decir, se puede cambiar.
+Incluimos la librería:
+#+BEGIN_SRC cpp -n
+#include <vector>
+#+END_SRC
+Inicializamos nuestro vector "vec":
+#+BEGIN_SRC cpp +n
+int n = 3;
+vector < int > vec(n, 0); // Inicializa un vector de tamaño 3 con todos sus valores = 0. Tanto el tamaño como valor son opcionales.
+#+END_SRC
+*** Asignar un valor
+#+BEGIN_SRC cpp +n
+vec[2] = 1; // Asigna el valor "1" al índice 2 (es decir, al 3er valor del vector)
+#+END_SRC
+*** push back (empujar atrás)
+Si no sabemos el tamaño de nuestro vector, podemos simplemente usar push_back(valor); para enviar es valor al final del vector.
+#+BEGIN_SRC cpp +n
+vec.push_back(1); // Inserta un 1 al final del vector
+#+END_SRC
+Por ejemplo, se podría usar en un for, sin necesidad de inicializar el vector con una cantidad de valores.
+#+BEGIN_SRC cpp +n
+vector <int> vec2;
+int n;
+cin >> n;
+for (int i = 0; i < n; ++i){
+    int valor;
+    cin >> valor;
+    vec2.push_back();
+}
+#+END_SRC
+*** pop back (quitar atrás)
+Elimina el último valor del vector.
+#+BEGIN_SRC cpp +n
+vec.pop_back(); // En este caso, elimina el 1
+#+END_SRC
+*** insert (insertar)
+Podemos insertar un valor entre dos indices de un vector. El problema de esto es que mueve todos los valores que estén más adelante, lo que es lento.
+#+BEGIN_SRC cpp +n
+vec.insert(vec.begin() + 2, 4); // Inserta el valor 4 al índice 2
+#+END_SRC
+*** erase (borrar)
+Borra un dato del vector. Al igual que el insert, tiene que mover todos los datos siguientes (esta vez a la derecha).
+#+BEGIN_SRC cpp +n
+vec.erase(vec.begin() + 2); // Elimina el valor con índice 2, en nuestro caso, el 4 que insertamos antes.
+#+END_SRC
+** Stacks (pilas)
+-----
+La pila es una estructura de datos lineal al que sólo puedes acceder al último elemento que fue insertado. Imagina una pila de platos, por ejemplo.
+#+BEGIN_SRC cpp -n
+stack < int > pilita;
+#+END_SRC
+*** push (empujar)
+Empuja un dato a la cima de la pila.
+#+BEGIN_SRC cpp +n
+pilita.push(8); // Empuja un 8 a la cima de la pila.
+#+END_SRC
+*** top (cima)
+Lee lo que hay en la cima de la pila.
+#+BEGIN_SRC cpp +n
+pilita.top(); // Retorna el 8.
+#+END_SRC
+*** pop (quitar)
+Remueve el dato de la cima de la pila.
+#+BEGIN_SRC cpp +n
+pilita.pop(); // Remueve el 8.
+#+END_SRC
+*** empty (vacío)
+Retorna 1 si la pila está vacía, de lo contrario retorna 0.
+#+BEGIN_SRC cpp +n
+pilita.empty(); // Retorna 1 ya que nuestra pila está vacía.
+#+END_SRC
+*** size (tamaño)
+Retorna el tamaño de nuestra pila.
+#+BEGIN_SRC cpp +n
+pilita.size(); // Retorna 0 ya que nuestra pila no tiene datos.
+#+END_SRC
+** Queues (colas)
+-----
+La cola es una estructura de datos lineal al que sólo puedes acceder al primer elemento que fue insertado. Imagina una fila de una caja de un supermercado, por ejemplo.
+#+BEGIN_SRC cpp -n
+queue < int > colita;
+#+END_SRC
+*** push (empujar)
+Añade un dato al final de la cola.
+#+BEGIN_SRC cpp +n
+colita.push(5);
+colita.push(4);
+colita.push(3);
+colita.push(2);
+colita.push(1);
+#+END_SRC
+*** front (frente)
+Lee el dato que está al frente de la cola.
+#+BEGIN_SRC cpp +n
+colita.front(); // Retorna 5, ya que fue lo primero que empujamos a la cola.
+#+END_SRC
+*** pop (quitar)
+Remueve el dato que está al frente de la cola
+#+BEGIN_SRC cpp +n
+colita.pop();   // Remueve el 5
+colita.front(); // Retorna 4, ya que fue lo segundo que empujamos a la cola (y que ahora está primero).
+#+END_SRC
+*** empty (vacío)
+Retorna 1 si la cola está vacía, de lo contrario retorna 0.
+#+BEGIN_SRC cpp +n
+colita.empty(); // Retorna 1 ya que nuestra cola está vacía.
+#+END_SRC
+*** size (tamaño)
+Retorna el tamaño de nuestra cola.
+#+BEGIN_SRC cpp +n
+colita.size(); // Retorna 0 ya que nuestra cola no tiene datos.
+#+END_SRC
+* Estructuras en forma de árbol
+Véase: arbol binario
+** Set (conjunto)
+-----
+No permite que hayan elementos repetidos.
+*** Inicialización
+Incluimos la librería:
+#+BEGIN_SRC cpp -n
+#include <set>
+#+END_SRC
+Inicializamos nuestro conjunto:
+#+BEGIN_SRC cpp +n
+set < int > conjunto; // int puede ser reemplazado con cualquier otro tipo de dato
+#+END_SRC
+*** insert (Insertar)
+Inserta un dato. Retorna un par de elementos, el primero siendo el iterador del valor insertado y el segundo siendo un bool que marca si es que ya existía o no. En el ejemplo de abajo, usamos .second para comprobar si se insertó correctamente o no.
+#+BEGIN_SRC cpp +n
+if (conjunto.insert(10).second) // Retorna TRUE ya que no estaba anteriormente
+    cout << "ganai\n"; if (conjunto.insert(10).second); // Retorna FALSE ya que ya había un 10.
+cout << "no ganai\n";
+conjunto.insert(20);
+conjunto.insert(40);
+conjunto.insert(30);
+conjunto.insert(11);
+#+END_SRC
+*** find (Encontrar)
+Busca un elemento en el set y si lo encuentra retorna un iterador al valor. De lo contrario, retorna conjunto.end();
+#+BEGIN_SRC cpp +n
+if (conjunto.find(10) != conjunto.end())
+    cout << "ganai\n";
+#+END_SRC
+*** erase (borrar)
+Puedes borrar un valor si le entregas el iterador al valor.
+#+BEGIN_SRC cpp +n
+set < int >::iterator it = conjunto.find(11);
+if (it != conjunto.end())
+    conjunto.erase(it);
+#+END_SRC
+*** Iterar a través de un conjunto
+Puedes iterar a través de un conjunto con los valores ya ordenados con un iterador:
+#+BEGIN_SRC cpp +n
+// Imprime 10 11 20 30 40
+for (it = conjunto.begin(); it != conjunto.end(); ++it)
+    cout << *it << " ";
+cout << '\n';
+#+END_SRC
+** Map (mapa, tabla de hashing)
+-----
+Toma dos datos, una llave y un valor. Puedes buscar una llave en tiempo logarítmico con la implementación de la STL. Pero con otras implementaciones se puede hacer en tiempo constante. Las llaves no se pueden repetir.
+*** Ejemplo cotidiano
+Libros:
+| Título (Llave)               | Autor (Valor)   |
+|------------------------------+-----------------|
+| The C Programming Language   | Brian Keringhan |
+| The AWK Programming Language | Brian Keringhan |
+| 1984                         | George Orwell   |
+
+Curso:
+| Apellido | Cantidad de alumnos con el apellido |
+|----------+-------------------------------------|
+| Gonzalez |                                   3 |
+| Perez    |                                   2 |
+
+*** Inicializar
+Incluimos la librería de map:
+#+BEGIN_SRC cpp -n
+#include <map>
+#+END_SRC
+Inicializamos el mapa curso:
+#+BEGIN_SRC cpp +n
+map<string, int> curso;
+#+END_SRC
+*** Insert (insertar)
+Forma 1:
+#+BEGIN_SRC cpp +n
+curso["perez"] = 1;
+#+END_SRC
+Forma 2:
+#+BEGIN_SRC cpp +n
+curso.insert(pair<string, int>("gonzalez, 3"));
+#+END_SRC
+*** Operar con los valores
+Se puede operar con el valor tomando la llave.
+Ejemplo 1:
+#+BEGIN_SRC cpp +n
+++curso.["perez"]; // Incrementar el valor de la llave perez, por ejemplo.
+#+END_SRC
+Ejemplo 2:
+#+BEGIN_SRC cpp +n
+cout << curso.["perez"] << endl; // El output será 2.
+#+END_SRC
+Cuidado con operar con valores no existentes, pues los inicializará de una forma inesperada.
+*** Find (encontrar)
+Retorna un iterador, si no lo encuentra, apunta a map.end()
+Asignamos el iterador it a gonzalez, y luego lo usamos:
+#+BEGIN_SRC cpp +n
+map<string, int>::iterator it;
+it = curso.find("gonzalez");
+
+if (it != curso.end()){
+cout << "Hay " << it->second << " " << it->first << " en el curso:\n";
+cout << "Llave: " << it->first << " Valor: " << it->second << '\n';
+}
+#+END_SRC
+Podemos incluso operar usando los iteradores:
+#+BEGIN_SRC cpp +n
+it->++second;
+#+END_SRC
+*** Erase (borrar)
+Forma 1:
+#+BEGIN_SRC cpp +n
+it = curso.find("perez");
+curso.erase(it);
+#+END_SRC
+Forma 2:
+#+BEGIN_SRC cpp +n
+curso.erase("gonzalez");
+#+END_SRC
+*** Recorrer los valores de un vector
+Es exactamente igual que en un conjunto:
+#+BEGIN_SRC cpp +n
+for (it = curso.begin(); it != curso.end(); ++it){
+    cout << "Llave: " << it->first << " Valor: " << it->second << '\n';
+}
+#+END_SRC
+
+*** Dudas que no dejan dormir
+**** ¿Qué pasa si modifico una llave?
+No se puede, tu código no compilará pues es ilegal hacerlo 👮🚓🚨
+**** ¿Puedo buscar con el second?
+No, en ese caso recomendamos otra estructura, o tener dos maps 👀
+**** ¿Puedo tener un map dentro de un map?
+Si, pero es de psicópata buscar dentro de ese map.
