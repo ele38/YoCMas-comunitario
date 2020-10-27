@@ -1,2 +1,3 @@
 # Índice
-[Página principal](content/clases/main.md)
+[Página principal](content/main.md)
+[indice Hugo](public/index.html)
