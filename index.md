@@ -3,4 +3,4 @@
 
 [indice Hugo](public/index.html)
 
-(main)[main.md]
+[main](main.md)
