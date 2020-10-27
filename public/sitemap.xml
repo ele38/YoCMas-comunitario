@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>ele38.github.io/main/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>ele38.github.io/</loc>
+  </url>
+  
+  <url>
+    <loc>ele38.github.io/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>ele38.github.io/clases/</loc>
+  </url>
+  
+  <url>
+    <loc>ele38.github.io/clases/main/</loc>
+  </url>
+  
+  <url>
+    <loc>ele38.github.io/tags/</loc>
+  </url>
+  
+</urlset>

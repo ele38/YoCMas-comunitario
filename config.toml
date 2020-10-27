@@ -1,0 +1,20 @@
+baseURL = "ele38.github.io"
+languageCode = "es-cl"
+title = "Apuntes YoC+ Comunitarios"
+theme = "hugo-geekdoc"
+
+# Geekdoc required configuration
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+disablePathToLower = true
+
+# Needed for mermaid shortcodes
+[markup]
+  [markup.goldmark.renderer]
+    # Needed for mermaid shortcode
+    unsafe = true
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 9
+
+publishDir = "docs"
