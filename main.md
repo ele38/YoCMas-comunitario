@@ -1,13 +1,3 @@
----
-title: Estructuras de datos
----
-
-```{=org}
-#+HUGO_BASE_DIR: /home/ele/cpp/yocmas-hugo/
-```
-```{=org}
-#+HUGO_SECTION: ./clases
-```
 Estructuras lineales
 ====================
 
@@ -19,53 +9,41 @@ Vectores
 Los vectores son como arreglos, excepto de que el tamaño es dinámico, es
 decir, se puede cambiar. Incluimos la librería:
 
-``` {.cpp .numberLines startFrom=""}
-#include <vector>
-```
+    #include <vector>
 
-Inicializamos nuestro vector \"vec\":
+Inicializamos nuestro vector "vec":
 
-``` {.cpp .numberLines .continuedSourceBlock startFrom=""}
-int n = 3;
-vector < int > vec(n, 0); // Inicializa un vector de tamaño 3 con todos sus valores = 0. Tanto el tamaño como valor son opcionales.
-```
+    int n = 3;
+    vector < int > vec(n, 0); // Inicializa un vector de tamaño 3 con todos sus valores = 0. Tanto el tamaño como valor son opcionales.
 
 ### Asignar un valor
 
-``` {.cpp .numberLines .continuedSourceBlock startFrom=""}
-vec[2] = 1; // Asigna el valor "1" al índice 2 (es decir, al 3er valor del vector)
-```
+    vec[2] = 1; // Asigna el valor "1" al índice 2 (es decir, al 3er valor del vector)
 
 ### push back (empujar atrás)
 
 Si no sabemos el tamaño de nuestro vector, podemos simplemente usar
-push~back~(valor); para enviar es valor al final del vector.
+push<sub>back</sub>(valor); para enviar es valor al final del vector.
 
-``` {.cpp .numberLines .continuedSourceBlock startFrom=""}
-vec.push_back(1); // Inserta un 1 al final del vector
-```
+    vec.push_back(1); // Inserta un 1 al final del vector
 
 Por ejemplo, se podría usar en un for, sin necesidad de inicializar el
 vector con una cantidad de valores.
 
-``` {.cpp .numberLines .continuedSourceBlock startFrom=""}
-vector <int> vec2;
-int n;
-cin >> n;
-for (int i = 0; i < n; ++i){
-    int valor;
-    cin >> valor;
-    vec2.push_back();
-}
-```
+    vector <int> vec2;
+    int n;
+    cin >> n;
+    for (int i = 0; i < n; ++i){
+        int valor;
+        cin >> valor;
+        vec2.push_back();
+    }
 
 ### pop back (quitar atrás)
 
 Elimina el último valor del vector.
 
-``` {.cpp .numberLines .continuedSourceBlock startFrom=""}
-vec.pop_back(); // En este caso, elimina el 1
-```
+    vec.pop_back(); // En este caso, elimina el 1
 
 ### insert (insertar)
 
@@ -73,18 +51,14 @@ Podemos insertar un valor entre dos indices de un vector. El problema de
 esto es que mueve todos los valores que estén más adelante, lo que es
 lento.
 
-``` {.cpp .numberLines .continuedSourceBlock startFrom=""}
-vec.insert(vec.begin() + 2, 4); // Inserta el valor 4 al índice 2
-```
+    vec.insert(vec.begin() + 2, 4); // Inserta el valor 4 al índice 2
 
 ### erase (borrar)
 
 Borra un dato del vector. Al igual que el insert, tiene que mover todos
 los datos siguientes (esta vez a la derecha).
 
-``` {.cpp .numberLines .continuedSourceBlock startFrom=""}
-vec.erase(vec.begin() + 2); // Elimina el valor con índice 2, en nuestro caso, el 4 que insertamos antes.
-```
+    vec.erase(vec.begin() + 2); // Elimina el valor con índice 2, en nuestro caso, el 4 que insertamos antes.
 
 Stacks (pilas)
 --------------
@@ -95,49 +69,37 @@ La pila es una estructura de datos lineal al que sólo puedes acceder al
 último elemento que fue insertado. Imagina una pila de platos, por
 ejemplo.
 
-``` {.cpp .numberLines startFrom=""}
-stack < int > pilita;
-```
+    stack < int > pilita;
 
 ### push (empujar)
 
 Empuja un dato a la cima de la pila.
 
-``` {.cpp .numberLines .continuedSourceBlock startFrom=""}
-pilita.push(8); // Empuja un 8 a la cima de la pila.
-```
+    pilita.push(8); // Empuja un 8 a la cima de la pila.
 
 ### top (cima)
 
 Lee lo que hay en la cima de la pila.
 
-``` {.cpp .numberLines .continuedSourceBlock startFrom=""}
-pilita.top(); // Retorna el 8.
-```
+    pilita.top(); // Retorna el 8.
 
 ### pop (quitar)
 
 Remueve el dato de la cima de la pila.
 
-``` {.cpp .numberLines .continuedSourceBlock startFrom=""}
-pilita.pop(); // Remueve el 8.
-```
+    pilita.pop(); // Remueve el 8.
 
 ### empty (vacío)
 
 Retorna 1 si la pila está vacía, de lo contrario retorna 0.
 
-``` {.cpp .numberLines .continuedSourceBlock startFrom=""}
-pilita.empty(); // Retorna 1 ya que nuestra pila está vacía.
-```
+    pilita.empty(); // Retorna 1 ya que nuestra pila está vacía.
 
 ### size (tamaño)
 
 Retorna el tamaño de nuestra pila.
 
-``` {.cpp .numberLines .continuedSourceBlock startFrom=""}
-pilita.size(); // Retorna 0 ya que nuestra pila no tiene datos.
-```
+    pilita.size(); // Retorna 0 ya que nuestra pila no tiene datos.
 
 Queues (colas)
 --------------
@@ -148,54 +110,42 @@ La cola es una estructura de datos lineal al que sólo puedes acceder al
 primer elemento que fue insertado. Imagina una fila de una caja de un
 supermercado, por ejemplo.
 
-``` {.cpp .numberLines startFrom=""}
-queue < int > colita;
-```
+    queue < int > colita;
 
 ### push (empujar)
 
 Añade un dato al final de la cola.
 
-``` {.cpp .numberLines .continuedSourceBlock startFrom=""}
-colita.push(5);
-colita.push(4);
-colita.push(3);
-colita.push(2);
-colita.push(1);
-```
+    colita.push(5);
+    colita.push(4);
+    colita.push(3);
+    colita.push(2);
+    colita.push(1);
 
 ### front (frente)
 
 Lee el dato que está al frente de la cola.
 
-``` {.cpp .numberLines .continuedSourceBlock startFrom=""}
-colita.front(); // Retorna 5, ya que fue lo primero que empujamos a la cola.
-```
+    colita.front(); // Retorna 5, ya que fue lo primero que empujamos a la cola.
 
 ### pop (quitar)
 
 Remueve el dato que está al frente de la cola
 
-``` {.cpp .numberLines .continuedSourceBlock startFrom=""}
-colita.pop();   // Remueve el 5
-colita.front(); // Retorna 4, ya que fue lo segundo que empujamos a la cola (y que ahora está primero).
-```
+    colita.pop();   // Remueve el 5
+    colita.front(); // Retorna 4, ya que fue lo segundo que empujamos a la cola (y que ahora está primero).
 
 ### empty (vacío)
 
 Retorna 1 si la cola está vacía, de lo contrario retorna 0.
 
-``` {.cpp .numberLines .continuedSourceBlock startFrom=""}
-colita.empty(); // Retorna 1 ya que nuestra cola está vacía.
-```
+    colita.empty(); // Retorna 1 ya que nuestra cola está vacía.
 
 ### size (tamaño)
 
 Retorna el tamaño de nuestra cola.
 
-``` {.cpp .numberLines .continuedSourceBlock startFrom=""}
-colita.size(); // Retorna 0 ya que nuestra cola no tiene datos.
-```
+    colita.size(); // Retorna 0 ya que nuestra cola no tiene datos.
 
 Estructuras en forma de árbol
 =============================
@@ -213,15 +163,11 @@ No permite que hayan elementos repetidos.
 
 Incluimos la librería:
 
-``` {.cpp .numberLines startFrom=""}
-#include <set>
-```
+    #include <set>
 
 Inicializamos nuestro conjunto:
 
-``` {.cpp .numberLines .continuedSourceBlock startFrom=""}
-set < int > conjunto; // int puede ser reemplazado con cualquier otro tipo de dato
-```
+    set < int > conjunto; // int puede ser reemplazado con cualquier otro tipo de dato
 
 ### insert (Insertar)
 
@@ -230,47 +176,39 @@ iterador del valor insertado y el segundo siendo un bool que marca si es
 que ya existía o no. En el ejemplo de abajo, usamos .second para
 comprobar si se insertó correctamente o no.
 
-``` {.cpp .numberLines .continuedSourceBlock startFrom=""}
-if (conjunto.insert(10).second) // Retorna TRUE ya que no estaba anteriormente
-    cout << "ganai\n"; if (conjunto.insert(10).second); // Retorna FALSE ya que ya había un 10.
-cout << "no ganai\n";
-conjunto.insert(20);
-conjunto.insert(40);
-conjunto.insert(30);
-conjunto.insert(11);
-```
+    if (conjunto.insert(10).second) // Retorna TRUE ya que no estaba anteriormente
+        cout << "ganai\n"; if (conjunto.insert(10).second); // Retorna FALSE ya que ya había un 10.
+    cout << "no ganai\n";
+    conjunto.insert(20);
+    conjunto.insert(40);
+    conjunto.insert(30);
+    conjunto.insert(11);
 
 ### find (Encontrar)
 
 Busca un elemento en el set y si lo encuentra retorna un iterador al
 valor. De lo contrario, retorna conjunto.end();
 
-``` {.cpp .numberLines .continuedSourceBlock startFrom=""}
-if (conjunto.find(10) != conjunto.end())
-    cout << "ganai\n";
-```
+    if (conjunto.find(10) != conjunto.end())
+        cout << "ganai\n";
 
 ### erase (borrar)
 
 Puedes borrar un valor si le entregas el iterador al valor.
 
-``` {.cpp .numberLines .continuedSourceBlock startFrom=""}
-set < int >::iterator it = conjunto.find(11);
-if (it != conjunto.end())
-    conjunto.erase(it);
-```
+    set < int >::iterator it = conjunto.find(11);
+    if (it != conjunto.end())
+        conjunto.erase(it);
 
 ### Iterar a través de un conjunto
 
 Puedes iterar a través de un conjunto con los valores ya ordenados con
 un iterador:
 
-``` {.cpp .numberLines .continuedSourceBlock startFrom=""}
-// Imprime 10 11 20 30 40
-for (it = conjunto.begin(); it != conjunto.end(); ++it)
-    cout << *it << " ";
-cout << '\n';
-```
+    // Imprime 10 11 20 30 40
+    for (it = conjunto.begin(); it != conjunto.end(); ++it)
+        cout << *it << " ";
+    cout << '\n';
 
 Map (mapa, tabla de hashing)
 ----------------------------
@@ -286,60 +224,48 @@ pueden repetir.
 
 Libros:
 
-  Título (Llave)                 Autor (Valor)
-  ------------------------------ -----------------
-  The C Programming Language     Brian Keringhan
-  The AWK Programming Language   Brian Keringhan
-  1984                           George Orwell
+| Título (Llave)               | Autor (Valor)   |
+|------------------------------|-----------------|
+| The C Programming Language   | Brian Keringhan |
+| The AWK Programming Language | Brian Keringhan |
+| 1984                         | George Orwell   |
 
 Curso:
 
-  Apellido   Cantidad de alumnos con el apellido
-  ---------- -------------------------------------
-  Gonzalez   3
-  Perez      2
+| Apellido | Cantidad de alumnos con el apellido |
+|----------|-------------------------------------|
+| Gonzalez | 3                                   |
+| Perez    | 2                                   |
 
 ### Inicializar
 
 Incluimos la librería de map:
 
-``` {.cpp .numberLines startFrom=""}
-#include <map>
-```
+    #include <map>
 
 Inicializamos el mapa curso:
 
-``` {.cpp .numberLines .continuedSourceBlock startFrom=""}
-map<string, int> curso;
-```
+    map<string, int> curso;
 
 ### Insert (insertar)
 
 Forma 1:
 
-``` {.cpp .numberLines .continuedSourceBlock startFrom=""}
-curso["perez"] = 1;
-```
+    curso["perez"] = 1;
 
 Forma 2:
 
-``` {.cpp .numberLines .continuedSourceBlock startFrom=""}
-curso.insert(pair<string, int>("gonzalez, 3"));
-```
+    curso.insert(pair<string, int>("gonzalez, 3"));
 
 ### Operar con los valores
 
 Se puede operar con el valor tomando la llave. Ejemplo 1:
 
-``` {.cpp .numberLines .continuedSourceBlock startFrom=""}
-++curso.["perez"]; // Incrementar el valor de la llave perez, por ejemplo.
-```
+    ++curso.["perez"]; // Incrementar el valor de la llave perez, por ejemplo.
 
 Ejemplo 2:
 
-``` {.cpp .numberLines .continuedSourceBlock startFrom=""}
-cout << curso.["perez"] << endl; // El output será 2.
-```
+    cout << curso.["perez"] << endl; // El output será 2.
 
 Cuidado con operar con valores no existentes, pues los inicializará de
 una forma inesperada.
@@ -349,46 +275,36 @@ una forma inesperada.
 Retorna un iterador, si no lo encuentra, apunta a map.end() Asignamos el
 iterador it a gonzalez, y luego lo usamos:
 
-``` {.cpp .numberLines .continuedSourceBlock startFrom=""}
-map<string, int>::iterator it;
-it = curso.find("gonzalez");
+    map<string, int>::iterator it;
+    it = curso.find("gonzalez");
 
-if (it != curso.end()){
-cout << "Hay " << it->second << " " << it->first << " en el curso:\n";
-cout << "Llave: " << it->first << " Valor: " << it->second << '\n';
-}
-```
+    if (it != curso.end()){
+    cout << "Hay " << it->second << " " << it->first << " en el curso:\n";
+    cout << "Llave: " << it->first << " Valor: " << it->second << '\n';
+    }
 
 Podemos incluso operar usando los iteradores:
 
-``` {.cpp .numberLines .continuedSourceBlock startFrom=""}
-it->++second;
-```
+    it->++second;
 
 ### Erase (borrar)
 
 Forma 1:
 
-``` {.cpp .numberLines .continuedSourceBlock startFrom=""}
-it = curso.find("perez");
-curso.erase(it);
-```
+    it = curso.find("perez");
+    curso.erase(it);
 
 Forma 2:
 
-``` {.cpp .numberLines .continuedSourceBlock startFrom=""}
-curso.erase("gonzalez");
-```
+    curso.erase("gonzalez");
 
 ### Recorrer los valores de un vector
 
 Es exactamente igual que en un conjunto:
 
-``` {.cpp .numberLines .continuedSourceBlock startFrom=""}
-for (it = curso.begin(); it != curso.end(); ++it){
-    cout << "Llave: " << it->first << " Valor: " << it->second << '\n';
-}
-```
+    for (it = curso.begin(); it != curso.end(); ++it){
+        cout << "Llave: " << it->first << " Valor: " << it->second << '\n';
+    }
 
 ### Dudas que no dejan dormir
 
