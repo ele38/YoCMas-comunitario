@@ -1,4 +1,4 @@
-baseURL = "ele38.github.io"
+baseURL = "yoc+"
 languageCode = "es-cl"
 title = "Apuntes YoC+ Comunitarios"
 theme = "hugo-geekdoc"
