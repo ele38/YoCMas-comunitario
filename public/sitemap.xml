@@ -3,12 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>yoc&#43;/main/</loc>
-    <priority>0</priority>
+    <loc>yoc&#43;/</loc>
   </url>
   
   <url>
-    <loc>yoc&#43;/</loc>
+    <loc>yoc&#43;/estructuras_arbol/</loc>
+  </url>
+  
+  <url>
+    <loc>yoc&#43;/vectores/</loc>
+  </url>
+  
+  <url>
+    <loc>yoc&#43;/stacks/</loc>
   </url>
   
   <url>
@@ -16,11 +23,7 @@
   </url>
   
   <url>
-    <loc>yoc&#43;/clases/</loc>
-  </url>
-  
-  <url>
-    <loc>yoc&#43;/clases/main/</loc>
+    <loc>yoc&#43;/categories/EDD/</loc>
   </url>
   
   <url>

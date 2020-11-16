@@ -2,18 +2,16 @@
 <html lang="en">
 
 <head>
-	<meta name="generator" content="Hugo 0.78.1" />
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Estructuras lineales">
+<meta name="description" content="Vectores">
 
-<title>Estructuras lineales | Apuntes YoC&#43; Comunitarios</title>
+<title>Vectores | Apuntes YoC&#43; Comunitarios</title>
 
 <link rel="icon" href="/yoc&#43;/favicon/favicon-32x32.png" type="image/x-icon">
 <link rel="stylesheet" href="/yoc&#43;/main.min.css" media="screen">
 <link rel="stylesheet" href="/yoc&#43;/custom.css" media="screen">
 
-<link rel="alternate" type="application/rss+xml" href="yoc+/index.xml" title="Apuntes YoC+ Comunitarios" />
 <!--Made with Geekdoc theme https://github.com/xoxys/hugo-geekdoc-->
 
 </head>
@@ -101,7 +99,14 @@
                 
     
     
-        Estructuras lineales
+        
+        
+        
+    
+    
+        <a href='yoc+/'>Estructuras lineales</a> / Vectores
+    
+
     
 
             </span>
@@ -112,8 +117,9 @@
     </span>
 </div>
 
+
     <article class="gdoc-markdown">
-        <h1>Estructuras lineales</h1>
+        <h1>Vectores</h1>
         
 
 
@@ -125,17 +131,14 @@
 <div></div>
 <div class="heading">Table of Contents</div>
 <ul>
-<li><a href="#vectores">Vectores</a></li>
-<li><a href="#stacks--pilas">Stacks (pilas)</a></li>
-<li><a href="#queues--colas">Queues (colas)</a></li>
+<li><a href="#asignar-un-valor">Asignar un valor</a></li>
+<li><a href="#push-back--empujar-atr%C3%A1s">push back (empujar atrás)</a></li>
+<li><a href="#pop-back--quitar-atr%C3%A1s">pop back (quitar atrás)</a></li>
+<li><a href="#insert--insertar">insert (insertar)</a></li>
+<li><a href="#erase--borrar">erase (borrar)</a></li>
 </ul>
 </div>
 <!--endtoc-->
-<ul>
-<li><a href="vectores">Vectores</a></li>
-<li><a href="stacks">Stacks (Pilas)</a></li>
-</ul>
-<div class="gdoc-page__anchorwrap"><h2 id="vectores">Vectores<a data-clipboard-text="yoc+/yoc+/" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor Vectores" href="#vectores"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
 <p>Los vectores son como arreglos, excepto de que el tamaño es dinámico, es decir, se puede cambiar.
 Incluimos la librería:</p>
 <div class="highlight"><div class="chroma">
@@ -159,7 +162,7 @@ Incluimos la librería:</p>
 </span></code></pre></td></tr></table>
 </div>
 </div>
-<div class="gdoc-page__anchorwrap"><h3 id="asignar-un-valor">Asignar un valor<a data-clipboard-text="yoc+/yoc+/" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor Asignar un valor" href="#asignar-un-valor"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h3></div>
+<div class="gdoc-page__anchorwrap"><h2 id="asignar-un-valor">Asignar un valor<a data-clipboard-text="yoc+/yoc+/vectores/" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor Asignar un valor" href="#asignar-un-valor"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">4
@@ -169,7 +172,7 @@ Incluimos la librería:</p>
 </span></code></pre></td></tr></table>
 </div>
 </div>
-<div class="gdoc-page__anchorwrap"><h3 id="push-back--empujar-atrás">push back (empujar atrás)<a data-clipboard-text="yoc+/yoc+/" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor push back (empujar atrás)" href="#push-back--empujar-atrás"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h3></div>
+<div class="gdoc-page__anchorwrap"><h2 id="push-back--empujar-atrás">push back (empujar atrás)<a data-clipboard-text="yoc+/yoc+/vectores/" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor push back (empujar atrás)" href="#push-back--empujar-atrás"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
 <p>Si no sabemos el tamaño de nuestro vector, podemos simplemente usar push_back(valor); para enviar es valor al final del vector.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -204,7 +207,7 @@ Incluimos la librería:</p>
 </code></pre></td></tr></table>
 </div>
 </div>
-<div class="gdoc-page__anchorwrap"><h3 id="pop-back--quitar-atrás">pop back (quitar atrás)<a data-clipboard-text="yoc+/yoc+/" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor pop back (quitar atrás)" href="#pop-back--quitar-atrás"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h3></div>
+<div class="gdoc-page__anchorwrap"><h2 id="pop-back--quitar-atrás">pop back (quitar atrás)<a data-clipboard-text="yoc+/yoc+/vectores/" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor pop back (quitar atrás)" href="#pop-back--quitar-atrás"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
 <p>Elimina el último valor del vector.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -215,7 +218,7 @@ Incluimos la librería:</p>
 </span></code></pre></td></tr></table>
 </div>
 </div>
-<div class="gdoc-page__anchorwrap"><h3 id="insert--insertar">insert (insertar)<a data-clipboard-text="yoc+/yoc+/" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor insert (insertar)" href="#insert--insertar"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h3></div>
+<div class="gdoc-page__anchorwrap"><h2 id="insert--insertar">insert (insertar)<a data-clipboard-text="yoc+/yoc+/vectores/" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor insert (insertar)" href="#insert--insertar"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
 <p>Podemos insertar un valor entre dos indices de un vector. El problema de esto es que mueve todos los valores que estén más adelante, lo que es lento.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -226,7 +229,7 @@ Incluimos la librería:</p>
 </span></code></pre></td></tr></table>
 </div>
 </div>
-<div class="gdoc-page__anchorwrap"><h3 id="erase--borrar">erase (borrar)<a data-clipboard-text="yoc+/yoc+/" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor erase (borrar)" href="#erase--borrar"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h3></div>
+<div class="gdoc-page__anchorwrap"><h2 id="erase--borrar">erase (borrar)<a data-clipboard-text="yoc+/yoc+/vectores/" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor erase (borrar)" href="#erase--borrar"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
 <p>Borra un dato del vector. Al igual que el insert, tiene que mover todos los datos siguientes (esta vez a la derecha).</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -234,149 +237,6 @@ Incluimos la librería:</p>
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">vec</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">vec</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span> <span class="o">+</span> <span class="mi">2</span><span class="p">);</span> <span class="c1">// Elimina el valor con índice 2, en nuestro caso, el 4 que insertamos antes.
-</span></code></pre></td></tr></table>
-</div>
-</div>
-<div class="gdoc-page__anchorwrap"><h2 id="stacks--pilas">Stacks (pilas)<a data-clipboard-text="yoc+/yoc+/" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor Stacks (pilas)" href="#stacks--pilas"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
-<p>La pila es una estructura de datos lineal al que sólo puedes acceder al último elemento que fue insertado. Imagina una pila de platos, por ejemplo.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">stack</span> <span class="o">&lt;</span> <span class="kt">int</span> <span class="o">&gt;</span> <span class="n">pilita</span><span class="p">;</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<div class="gdoc-page__anchorwrap"><h3 id="push--empujar">push (empujar)<a data-clipboard-text="yoc+/yoc+/" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor push (empujar)" href="#push--empujar"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h3></div>
-<p>Empuja un dato a la cima de la pila.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">pilita</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span> <span class="c1">// Empuja un 8 a la cima de la pila.
-</span></code></pre></td></tr></table>
-</div>
-</div>
-<div class="gdoc-page__anchorwrap"><h3 id="top--cima">top (cima)<a data-clipboard-text="yoc+/yoc+/" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor top (cima)" href="#top--cima"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h3></div>
-<p>Lee lo que hay en la cima de la pila.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">pilita</span><span class="p">.</span><span class="n">top</span><span class="p">();</span> <span class="c1">// Retorna el 8.
-</span></code></pre></td></tr></table>
-</div>
-</div>
-<div class="gdoc-page__anchorwrap"><h3 id="pop--quitar">pop (quitar)<a data-clipboard-text="yoc+/yoc+/" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor pop (quitar)" href="#pop--quitar"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h3></div>
-<p>Remueve el dato de la cima de la pila.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">pilita</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span> <span class="c1">// Remueve el 8.
-</span></code></pre></td></tr></table>
-</div>
-</div>
-<div class="gdoc-page__anchorwrap"><h3 id="empty--vacío">empty (vacío)<a data-clipboard-text="yoc+/yoc+/" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor empty (vacío)" href="#empty--vacío"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h3></div>
-<p>Retorna 1 si la pila está vacía, de lo contrario retorna 0.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">pilita</span><span class="p">.</span><span class="n">empty</span><span class="p">();</span> <span class="c1">// Retorna 1 ya que nuestra pila está vacía.
-</span></code></pre></td></tr></table>
-</div>
-</div>
-<div class="gdoc-page__anchorwrap"><h3 id="size--tamaño">size (tamaño)<a data-clipboard-text="yoc+/yoc+/" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor size (tamaño)" href="#size--tamaño"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h3></div>
-<p>Retorna el tamaño de nuestra pila.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">pilita</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="c1">// Retorna 0 ya que nuestra pila no tiene datos.
-</span></code></pre></td></tr></table>
-</div>
-</div>
-<div class="gdoc-page__anchorwrap"><h2 id="queues--colas">Queues (colas)<a data-clipboard-text="yoc+/yoc+/" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor Queues (colas)" href="#queues--colas"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h2></div>
-<hr>
-<p>La cola es una estructura de datos lineal al que sólo puedes acceder al primer elemento que fue insertado. Imagina una fila de una caja de un supermercado, por ejemplo.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">queue</span> <span class="o">&lt;</span> <span class="kt">int</span> <span class="o">&gt;</span> <span class="n">colita</span><span class="p">;</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<div class="gdoc-page__anchorwrap"><h3 id="push--empujar">push (empujar)<a data-clipboard-text="yoc+/yoc+/" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor push (empujar)" href="#push--empujar"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h3></div>
-<p>Añade un dato al final de la cola.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">colita</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
-<span class="n">colita</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
-<span class="n">colita</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
-<span class="n">colita</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-<span class="n">colita</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<div class="gdoc-page__anchorwrap"><h3 id="front--frente">front (frente)<a data-clipboard-text="yoc+/yoc+/" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor front (frente)" href="#front--frente"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h3></div>
-<p>Lee el dato que está al frente de la cola.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">colita</span><span class="p">.</span><span class="n">front</span><span class="p">();</span> <span class="c1">// Retorna 5, ya que fue lo primero que empujamos a la cola.
-</span></code></pre></td></tr></table>
-</div>
-</div>
-<div class="gdoc-page__anchorwrap"><h3 id="pop--quitar">pop (quitar)<a data-clipboard-text="yoc+/yoc+/" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor pop (quitar)" href="#pop--quitar"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h3></div>
-<p>Remueve el dato que está al frente de la cola</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">colita</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>   <span class="c1">// Remueve el 5
-</span><span class="c1"></span><span class="n">colita</span><span class="p">.</span><span class="n">front</span><span class="p">();</span> <span class="c1">// Retorna 4, ya que fue lo segundo que empujamos a la cola (y que ahora está primero).
-</span></code></pre></td></tr></table>
-</div>
-</div>
-<div class="gdoc-page__anchorwrap"><h3 id="empty--vacío">empty (vacío)<a data-clipboard-text="yoc+/yoc+/" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor empty (vacío)" href="#empty--vacío"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h3></div>
-<p>Retorna 1 si la cola está vacía, de lo contrario retorna 0.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">colita</span><span class="p">.</span><span class="n">empty</span><span class="p">();</span> <span class="c1">// Retorna 1 ya que nuestra cola está vacía.
-</span></code></pre></td></tr></table>
-</div>
-</div>
-<div class="gdoc-page__anchorwrap"><h3 id="size--tamaño">size (tamaño)<a data-clipboard-text="yoc+/yoc+/" class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor size (tamaño)" href="#size--tamaño"><svg class="icon link"><use xlink:href="#link"></use></svg></a></h3></div>
-<p>Retorna el tamaño de nuestra cola.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">11
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">colita</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="c1">// Retorna 0 ya que nuestra cola no tiene datos.
 </span></code></pre></td></tr></table>
 </div>
 </div>

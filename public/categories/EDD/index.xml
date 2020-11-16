@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Estructuras lineales on Apuntes YoC&#43; Comunitarios</title>
-    <link>yoc&#43;/</link>
-    <description>Recent content in Estructuras lineales on Apuntes YoC&#43; Comunitarios</description>
+    <title>EDD on Apuntes YoC&#43; Comunitarios</title>
+    <link>yoc&#43;/categories/EDD/</link>
+    <description>Recent content in EDD on Apuntes YoC&#43; Comunitarios</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>es-cl</language><atom:link href="yoc+/index.xml" rel="self" type="application/rss+xml" />
+    <language>es-cl</language><atom:link href="yoc+/categories/EDD/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Estructuras en forma de árbol</title>
-      <link>yoc&#43;/estructuras_arbol/</link>
+      <title>Estructuras lineales</title>
+      <link>yoc&#43;/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>yoc&#43;/estructuras_arbol/</guid>
-      <description>Table of Contents  Set (conjunto) Map (mapa, tabla de hashing)    Véase: arbol binario
-Set (conjunto)  No permite que hayan elementos repetidos.
-Inicialización Incluimos la librería:
-1  #include &amp;lt;set&amp;gt;   Inicializamos nuestro conjunto:
-2  set &amp;lt; int &amp;gt; conjunto; // int puede ser reemplazado con cualquier otro tipo de dato    insert (Insertar) Inserta un dato. Retorna un par de elementos, el primero siendo el iterador del valor insertado y el segundo siendo un bool que marca si es que ya existía o no.</description>
+      <guid>yoc&#43;/</guid>
+      <description>Table of Contents  Vectores Stacks (pilas) Queues (colas)     Vectores Stacks (Pilas)  Vectores Los vectores son como arreglos, excepto de que el tamaño es dinámico, es decir, se puede cambiar. Incluimos la librería:
+1  #include &amp;lt;vector&amp;gt;   Inicializamos nuestro vector &amp;ldquo;vec&amp;rdquo;:
+2 3  int n = 3; vector &amp;lt; int &amp;gt; vec(n, 0); // Inicializa un vector de tamaño 3 con todos sus valores = 0.</description>
     </item>
     
     <item>
