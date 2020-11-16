@@ -1,4 +1,4 @@
-baseURL = "yoc+"
+baseURL = ""
 languageCode = "es-cl"
 title = "Apuntes YoC+ Comunitarios"
 theme = "hugo-geekdoc"
