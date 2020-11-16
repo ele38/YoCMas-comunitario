@@ -1,10 +1,30 @@
 #+TITLE: Estructuras de datos
-#+HUGO_BASE_DIR: /home/ele/cpp/yocmas-hugo/
-#+HUGO_SECTION: ./clases
-#+OPTIONS: toc:3
-* Estructuras lineales
-** Vectores
-------
+#+HUGO_BASE_DIR: ../
+#+HUGO_SECTION: ./
+#+HUGO_WEIGHT: auto
+#+OPTIONS: toc:1
+* Estructuras de datos
+:PROPERTIES:
+:EXPORT_HUGO_BUNDLE: ./estructuras de datos
+:HUGO_SECTION: ./edd
+:EXPORT_HUGO_MENU: :menu
+:END:
+** Estructuras lineales
+:PROPERTIES:
+:EXPORT_HUGO_BUNDLE: ./estructuras lineales
+:HUGO_SECTION: ./lineales
+:EXPORT_HUGO_MENU: :menu
+:EXPORT_FILE_NAME: _index
+:END:
+*** Acerca de
+:PROPERTIES:
+:EXPORT_FILE_NAME: info
+:END:
+Rellenar página
+*** Vectores
+:PROPERTIES:
+:EXPORT_FILE_NAME: vectors
+:END:
 Los vectores son como arreglos, excepto de que el tamaño es dinámico, es decir, se puede cambiar.
 Incluimos la librería:
 #+BEGIN_SRC cpp -n
@@ -15,11 +35,11 @@ Inicializamos nuestro vector "vec":
 int n = 3;
 vector < int > vec(n, 0); // Inicializa un vector de tamaño 3 con todos sus valores = 0. Tanto el tamaño como valor son opcionales.
 #+END_SRC
-*** Asignar un valor
+**** Asignar un valor
 #+BEGIN_SRC cpp +n
 vec[2] = 1; // Asigna el valor "1" al índice 2 (es decir, al 3er valor del vector)
 #+END_SRC
-*** push back (empujar atrás)
+**** push back (empujar atrás)
 Si no sabemos el tamaño de nuestro vector, podemos simplemente usar push_back(valor); para enviar es valor al final del vector.
 #+BEGIN_SRC cpp +n
 vec.push_back(1); // Inserta un 1 al final del vector
@@ -35,59 +55,63 @@ for (int i = 0; i < n; ++i){
     vec2.push_back();
 }
 #+END_SRC
-*** pop back (quitar atrás)
+**** pop back (quitar atrás)
 Elimina el último valor del vector.
 #+BEGIN_SRC cpp +n
 vec.pop_back(); // En este caso, elimina el 1
 #+END_SRC
-*** insert (insertar)
+**** insert (insertar)
 Podemos insertar un valor entre dos indices de un vector. El problema de esto es que mueve todos los valores que estén más adelante, lo que es lento.
 #+BEGIN_SRC cpp +n
 vec.insert(vec.begin() + 2, 4); // Inserta el valor 4 al índice 2
 #+END_SRC
-*** erase (borrar)
+**** erase (borrar)
 Borra un dato del vector. Al igual que el insert, tiene que mover todos los datos siguientes (esta vez a la derecha).
 #+BEGIN_SRC cpp +n
 vec.erase(vec.begin() + 2); // Elimina el valor con índice 2, en nuestro caso, el 4 que insertamos antes.
 #+END_SRC
-** Stacks (pilas)
------
+*** Stacks (pilas)
+:PROPERTIES:
+:EXPORT_FILE_NAME: stacks
+:END:
 La pila es una estructura de datos lineal al que sólo puedes acceder al último elemento que fue insertado. Imagina una pila de platos, por ejemplo.
 #+BEGIN_SRC cpp -n
 stack < int > pilita;
 #+END_SRC
-*** push (empujar)
+**** push (empujar)
 Empuja un dato a la cima de la pila.
 #+BEGIN_SRC cpp +n
 pilita.push(8); // Empuja un 8 a la cima de la pila.
 #+END_SRC
-*** top (cima)
+**** top (cima)
 Lee lo que hay en la cima de la pila.
 #+BEGIN_SRC cpp +n
 pilita.top(); // Retorna el 8.
 #+END_SRC
-*** pop (quitar)
+**** pop (quitar)
 Remueve el dato de la cima de la pila.
 #+BEGIN_SRC cpp +n
 pilita.pop(); // Remueve el 8.
 #+END_SRC
-*** empty (vacío)
+**** empty (vacío)
 Retorna 1 si la pila está vacía, de lo contrario retorna 0.
 #+BEGIN_SRC cpp +n
 pilita.empty(); // Retorna 1 ya que nuestra pila está vacía.
 #+END_SRC
-*** size (tamaño)
+**** size (tamaño)
 Retorna el tamaño de nuestra pila.
 #+BEGIN_SRC cpp +n
 pilita.size(); // Retorna 0 ya que nuestra pila no tiene datos.
 #+END_SRC
-** Queues (colas)
------
+*** Queues (colas)
+:PROPERTIES:
+:EXPORT_FILE_NAME: queues
+:END:
 La cola es una estructura de datos lineal al que sólo puedes acceder al primer elemento que fue insertado. Imagina una fila de una caja de un supermercado, por ejemplo.
 #+BEGIN_SRC cpp -n
 queue < int > colita;
 #+END_SRC
-*** push (empujar)
+**** push (empujar)
 Añade un dato al final de la cola.
 #+BEGIN_SRC cpp +n
 colita.push(5);
@@ -96,33 +120,48 @@ colita.push(3);
 colita.push(2);
 colita.push(1);
 #+END_SRC
-*** front (frente)
+**** front (frente)
 Lee el dato que está al frente de la cola.
 #+BEGIN_SRC cpp +n
 colita.front(); // Retorna 5, ya que fue lo primero que empujamos a la cola.
 #+END_SRC
-*** pop (quitar)
+**** pop (quitar)
 Remueve el dato que está al frente de la cola
 #+BEGIN_SRC cpp +n
 colita.pop();   // Remueve el 5
 colita.front(); // Retorna 4, ya que fue lo segundo que empujamos a la cola (y que ahora está primero).
 #+END_SRC
-*** empty (vacío)
+**** empty (vacío)
 Retorna 1 si la cola está vacía, de lo contrario retorna 0.
 #+BEGIN_SRC cpp +n
 colita.empty(); // Retorna 1 ya que nuestra cola está vacía.
 #+END_SRC
-*** size (tamaño)
+**** size (tamaño)
 Retorna el tamaño de nuestra cola.
 #+BEGIN_SRC cpp +n
 colita.size(); // Retorna 0 ya que nuestra cola no tiene datos.
 #+END_SRC
-* Estructuras en forma de árbol
+
+#+RESULTS:
+
+** Estructuras en forma de árbol
+:PROPERTIES:
+:EXPORT_HUGO_BUNDLE: ./estructuras de arboles
+:HUGO_SECTION: ./arbol
+:EXPORT_HUGO_MENU: :menu
+:EXPORT_FILE_NAME: _index
+:END:
+*** Acerca de
+:PROPERTIES:
+:EXPORT_FILE_NAME: info
+:END:
 Véase: arbol binario
-** Set (conjunto)
------
+*** Set (conjunto)
+:PROPERTIES:
+:EXPORT_FILE_NAME: set
+:END:
 No permite que hayan elementos repetidos.
-*** Inicialización
+**** Inicialización
 Incluimos la librería:
 #+BEGIN_SRC cpp -n
 #include <set>
@@ -131,7 +170,7 @@ Inicializamos nuestro conjunto:
 #+BEGIN_SRC cpp +n
 set < int > conjunto; // int puede ser reemplazado con cualquier otro tipo de dato
 #+END_SRC
-*** insert (Insertar)
+**** insert (Insertar)
 Inserta un dato. Retorna un par de elementos, el primero siendo el iterador del valor insertado y el segundo siendo un bool que marca si es que ya existía o no. En el ejemplo de abajo, usamos .second para comprobar si se insertó correctamente o no.
 #+BEGIN_SRC cpp +n
 if (conjunto.insert(10).second) // Retorna TRUE ya que no estaba anteriormente
@@ -142,20 +181,20 @@ conjunto.insert(40);
 conjunto.insert(30);
 conjunto.insert(11);
 #+END_SRC
-*** find (Encontrar)
+**** find (Encontrar)
 Busca un elemento en el set y si lo encuentra retorna un iterador al valor. De lo contrario, retorna conjunto.end();
 #+BEGIN_SRC cpp +n
 if (conjunto.find(10) != conjunto.end())
     cout << "ganai\n";
 #+END_SRC
-*** erase (borrar)
+**** erase (borrar)
 Puedes borrar un valor si le entregas el iterador al valor.
 #+BEGIN_SRC cpp +n
 set < int >::iterator it = conjunto.find(11);
 if (it != conjunto.end())
     conjunto.erase(it);
 #+END_SRC
-*** Iterar a través de un conjunto
+**** Iterar a través de un conjunto
 Puedes iterar a través de un conjunto con los valores ya ordenados con un iterador:
 #+BEGIN_SRC cpp +n
 // Imprime 10 11 20 30 40
@@ -163,10 +202,12 @@ for (it = conjunto.begin(); it != conjunto.end(); ++it)
     cout << *it << " ";
 cout << '\n';
 #+END_SRC
-** Map (mapa, tabla de hashing)
------
+*** Map (mapa, tabla de hashing)
+:PROPERTIES:
+:EXPORT_FILE_NAME: map
+:END:
 Toma dos datos, una llave y un valor. Puedes buscar una llave en tiempo logarítmico con la implementación de la STL. Pero con otras implementaciones se puede hacer en tiempo constante. Las llaves no se pueden repetir.
-*** Ejemplo cotidiano
+**** Ejemplo cotidiano
 Libros:
 | Título (Llave)               | Autor (Valor)   |
 |------------------------------+-----------------|
@@ -180,7 +221,7 @@ Curso:
 | Gonzalez |                                   3 |
 | Perez    |                                   2 |
 
-*** Inicializar
+**** Inicializar
 Incluimos la librería de map:
 #+BEGIN_SRC cpp -n
 #include <map>
@@ -189,7 +230,7 @@ Inicializamos el mapa curso:
 #+BEGIN_SRC cpp +n
 map<string, int> curso;
 #+END_SRC
-*** Insert (insertar)
+**** Insert (insertar)
 Forma 1:
 #+BEGIN_SRC cpp +n
 curso["perez"] = 1;
@@ -198,7 +239,7 @@ Forma 2:
 #+BEGIN_SRC cpp +n
 curso.insert(pair<string, int>("gonzalez, 3"));
 #+END_SRC
-*** Operar con los valores
+**** Operar con los valores
 Se puede operar con el valor tomando la llave.
 Ejemplo 1:
 #+BEGIN_SRC cpp +n
@@ -209,7 +250,7 @@ Ejemplo 2:
 cout << curso.["perez"] << endl; // El output será 2.
 #+END_SRC
 Cuidado con operar con valores no existentes, pues los inicializará de una forma inesperada.
-*** Find (encontrar)
+**** Find (encontrar)
 Retorna un iterador, si no lo encuentra, apunta a map.end()
 Asignamos el iterador it a gonzalez, y luego lo usamos:
 #+BEGIN_SRC cpp +n
@@ -225,7 +266,7 @@ Podemos incluso operar usando los iteradores:
 #+BEGIN_SRC cpp +n
 it->++second;
 #+END_SRC
-*** Erase (borrar)
+**** Erase (borrar)
 Forma 1:
 #+BEGIN_SRC cpp +n
 it = curso.find("perez");
@@ -235,7 +276,7 @@ Forma 2:
 #+BEGIN_SRC cpp +n
 curso.erase("gonzalez");
 #+END_SRC
-*** Recorrer los valores de un vector
+**** Recorrer los valores de un mapa
 Es exactamente igual que en un conjunto:
 #+BEGIN_SRC cpp +n
 for (it = curso.begin(); it != curso.end(); ++it){
@@ -243,19 +284,42 @@ for (it = curso.begin(); it != curso.end(); ++it){
 }
 #+END_SRC
 
-*** Dudas que no dejan dormir
-**** ¿Qué pasa si modifico una llave?
+**** Dudas que no dejan dormir
+***** ¿Qué pasa si modifico una llave?
 No se puede, tu código no compilará pues es ilegal hacerlo 👮🚓🚨
-**** ¿Puedo buscar con el second?
+***** ¿Puedo buscar con el second?
 No, en ese caso recomendamos otra estructura, o tener dos maps 👀
-**** ¿Puedo tener un map dentro de un map?
+***** ¿Puedo tener un map dentro de un map?
 Si, pero es de psicópata buscar dentro de ese map.
 
-
 * Algoritmos de ordenamiento
+:PROPERTIES:
+:EXPORT_HUGO_BUNDLE: ./Algoritmos de ordenamiento
+:HUGO_SECTION: ./algoritmos_ordenamiento
+:EXPORT_HUGO_MENU: :menu
+:EXPORT_FILE_NAME: _index
+:END:
+** Acerca de
+:PROPERTIES:
+:EXPORT_FILE_NAME: info
+:END:
 Cada algoritmo de ordenamiento tiene su forma de operar, y podría ayudar a conseguir la respuesta a un problema, no necesariamente por el resultado del ordenamiento.
 ** Algoritmos de fuerza bruta
+:PROPERTIES:
+:EXPORT_HUGO_BUNDLE: ./Algoritmos de fuerza bruta
+:HUGO_SECTION: ./bruteforce
+:EXPORT_HUGO_MENU: :menu
+:EXPORT_FILE_NAME: _index
+:END:
+*** Acerca de
+:PROPERTIES:
+:EXPORT_FILE_NAME: info
+:END:
+Rellenar
 *** Bubble sort
+:PROPERTIES:
+:EXPORT_FILE_NAME: bubble
+:END:
  - Se van comparando los elementos, haciendo que los más grandes suban en el arreglo, como una burbuja.
  - Da lo mismo cómo estén ordenadas las cosas, porque puedes modificar la función de comparación.
  - Funciona invirtiendo el orden de cada par de elementos, si es que el primero es mayor que el segundo.
@@ -291,10 +355,30 @@ void bubblesort (vector<int> &vec) {
 }
 #+end_src
 *** Insertion sort
+:PROPERTIES:
+:EXPORT_FILE_NAME: insertion
+:END:
 - Se va de izquierda a derecha, se compara el segundo con el primero, se intercambian si el segundo es menor, si este es el caso, se vuelve a preguntar si el de la izquierda es menor al de mas a la izquierda y así hasta que se encuentre un caso en el que no o se llegue al principio del arreglo.
-**** Insertar ejemplo
-**** Insertar codigo de ejemplo
+**** Rellenar ejemplo
+**** Rellenar codigo de ejemplo
+** Algoritmos de "decrecer y conquistar"
+:PROPERTIES:
+:EXPORT_HUGO_BUNDLE: ./Algoritmos de decrecer y conquistar
+:HUGO_SECTION: ./decrecer
+:EXPORT_HUGO_MENU: :menu
+:EXPORT_FILE_NAME: _index
+:END:
+*** Acerca de
+:PROPERTIES:
+:EXPORT_FILE_NAME: info
+:END:
+Rellenar
 *** Selection sort
+:PROPERTIES:
+:EXPORT_FILE_NAME: selection
+:END:
 - Tiene dos sub-arreglos, uno de elementos ya ordenados y uno de los elementos resantes.
 - El arreglo ya ordenado parte vacío.
-- Se van insertando los valores no ordenados en el arreglo ordenado en la posición correspondiente.
+- Busca el valor mínimo entre los elementos no ordenados y lo añade al final de los ordenados.
+**** Rellenar ejemplo
+**** Rellenar codigo de ejemplo
