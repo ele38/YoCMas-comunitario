@@ -19,7 +19,7 @@ weight = 3002
 </div>
 <!--endtoc-->
 
-No permite que hayan elementos repetidos.
+Es una lista que no permite que hayan elementos repetidos.
 
 
 ## Inicialización {#inicialización}

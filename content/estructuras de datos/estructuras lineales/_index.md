@@ -11,7 +11,9 @@ weight = 2001
 <div class="heading">Table of Contents</div>
 
 - [Acerca de](#acerca-de)
-- [Vectores](#vectores)
+- [Arrays (arreglos)](#arrays--arreglos)
+- [Arrays multidimensionales](#arrays-multidimensionales)
+- [Vectors (vectores)](#vectors--vectores)
 - [Stacks (pilas)](#stacks--pilas)
 - [Queues (colas)](#queues--colas)
 
@@ -24,9 +26,87 @@ weight = 2001
 Rellenar página
 
 
-## Vectores {#vectores}
+## Arrays (arreglos) {#arrays--arreglos}
+
+Los arrays son conjuntos de datos que se almacenan en memoria de manera contigua usando el mismo nombre. Se usan índices para diferenciar los distintos valores del arreglo.
+Para crear una arreglo es necesario saber la cantidad de elementos que van a componer nuestro arreglo, pues la cantidad de elementos no se puede cambiar.
+Una cosa muy importante que al principio uno suele olvidar es que los índices de los arreglos parten en 0. Es decir, un arreglo de tamaño n puede tomar índices desde el 0 hasta el n-1.
+
+
+### Inicialización {#inicialización}
+
+Hay dos formas de inicializar un array, especificando su tamaño o llenandolo con valores por defecto.
+
+
+#### Inicializar un array por su tamaño {#inicializar-un-array-por-su-tamaño}
+
+Para inicializar un array por su tamaño, lo único que hay que especificar es el nombre de la variable y colocar entre "[]" el tamaño de nuestro arreglo. Recordar que como los arrays parten en 0, el valor máximo que podremos acceder será el tamaño del array menos 1.
+
+{{< highlight cpp "linenos=table, linenostart=1" >}}
+int arreglo[38]; // Inicializar un arreglo de ints de tamaño 38.
+{{< /highlight >}}
+
+
+#### Inicializar un array con valores por defecto {#inicializar-un-array-con-valores-por-defecto}
+
+Para inicializar un array con valores por defecto, no es necesario especificar el tamaño de nuestro array, pues este está implícito en la cantidad de valores que introducimos.
+
+{{< highlight cpp "linenos=table, linenostart=2" >}}
+int arreglo2[] = {3, 6, 2, 1};
+{{< /highlight >}}
+
+
+### Leer el valor de un arreglo {#leer-el-valor-de-un-arreglo}
+
+Para leer un valor de nuestro arreglo, solo hay que especificar el nombre del arreglo y su índice. Notar que sólo se puede acceder a un valor de un arreglo a la vez.
+
+```cpp
+arreglo2[3]; // Retorna 1
+```
+
+
+### Asignar valores a un arreglo {#asignar-valores-a-un-arreglo}
+
+Para esto, hay que especificar la variable, el índice al cuál acceder y especificar su nuevo valor. Recordar que el valor del índice puede ser una variable, pero que no puede estar fuera del rango del tamaño de nuestro arreglo.
+
+{{< highlight cpp "linenos=table, linenostart=3" >}}
+arreglo2[3] = 5; // El indice 3 de nuestro arreglo, ahora tiene el valor 3
+{{< /highlight >}}
+
+
+## Arrays multidimensionales {#arrays-multidimensionales}
+
+Un array multidimensional es aquel que requiuere de más de un índice para ser llamado, como su nombre lo indica, es útil para cuando necesitamos acceder a datos que requieren más de una dimensión, como por ejemplo valores dentro de una malla. Otra forma de enternder los arrays multidimensionales es como un arreglo de arreglos (de arreglos de arreglos.. n veces, siendo n la cantidad de dimensiones). Los arreglos de 2 dimensiones también son conocidos como matrices.
+
+
+### Inicializar un arreglo multidimensional {#inicializar-un-arreglo-multidimensional}
+
+Para esto, hay que especificar el tamaño de cada dimensión del array. Notar que la regla de que empiezan en 0 y terminan en n-1 se sigue cumpliendo. Es posible asignarles valores predeterminados, pero creo que eso se va poniendo exponencialmente más psicópata a medida de que vas incrementando las dimensiones del array a crear, por lo que no lo voy a demostrar.
+
+{{< highlight cpp "linenos=table, linenostart=1" >}}
+int matriz[3][4];
+int tridimensional[100][100][100];
+{{< /highlight >}}
+
+
+### Asignar valores en un arreglo multidimensional {#asignar-valores-en-un-arreglo-multidimensional}
+
+Es muy similar a cómo se hace en un arreglo unidimensional, solo que se especifica cada índice.
+
+{{< highlight cpp "linenos=table, linenostart=3" >}}
+int n = 3, m = 5;
+matriz[2][1] = 10;
+tridimensional[n][m] = 4;
+{{< /highlight >}}
+
+
+## Vectors (vectores) {#vectors--vectores}
 
 Los vectores son como arreglos, excepto de que el tamaño es dinámico, es decir, se puede cambiar.
+
+
+### Inicializar un vector {#inicializar-un-vector}
+
 Incluimos la librería:
 
 {{< highlight cpp "linenos=table, linenostart=1" >}}
@@ -95,6 +175,16 @@ Borra un dato del vector. Al igual que el insert, tiene que mover todos los dato
 {{< highlight cpp "linenos=table, linenostart=16" >}}
 vec.erase(vec.begin() + 2); // Elimina el valor con índice 2, en nuestro caso, el 4 que insertamos antes.
 {{< /highlight >}}
+
+
+### Iteradores de un arreglo {#iteradores-de-un-arreglo}
+
+Hay ciertos iteradores que podemos usar en un arreglo que nos ayudarán en algunos casos, como por ejemplo si quieremos recorrer un arreglo. Estos son:
+
+-   begin() -- Iterador que accede al primer valor del arreglo.
+-   end() -- Accede al final del arreglo.
+-   rbegin() -- Accede al ultimo elemento del arreglo
+-   rend -- Accede al inicio del arreglo
 
 
 ## Stacks (pilas) {#stacks--pilas}

@@ -2,7 +2,7 @@
 title = "Queues (colas)"
 author = ["Vicente Villarroel"]
 draft = false
-weight = 3004
+weight = 3006
 +++
 
 <div class="ox-hugo-toc toc">

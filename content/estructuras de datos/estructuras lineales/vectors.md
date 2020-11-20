@@ -1,8 +1,8 @@
 +++
-title = "Vectores"
+title = "Vectors (vectores)"
 author = ["Vicente Villarroel"]
 draft = false
-weight = 3002
+weight = 3004
 +++
 
 <div class="ox-hugo-toc toc">
@@ -10,16 +10,22 @@ weight = 3002
 
 <div class="heading">Table of Contents</div>
 
+- [Inicializar un vector](#inicializar-un-vector)
 - [Asignar un valor](#asignar-un-valor)
 - [push back (empujar atrás)](#push-back--empujar-atrás)
 - [pop back (quitar atrás)](#pop-back--quitar-atrás)
 - [insert (insertar)](#insert--insertar)
 - [erase (borrar)](#erase--borrar)
+- [Iteradores de un arreglo](#iteradores-de-un-arreglo)
 
 </div>
 <!--endtoc-->
 
 Los vectores son como arreglos, excepto de que el tamaño es dinámico, es decir, se puede cambiar.
+
+
+## Inicializar un vector {#inicializar-un-vector}
+
 Incluimos la librería:
 
 {{< highlight cpp "linenos=table, linenostart=1" >}}
@@ -88,3 +94,13 @@ Borra un dato del vector. Al igual que el insert, tiene que mover todos los dato
 {{< highlight cpp "linenos=table, linenostart=16" >}}
 vec.erase(vec.begin() + 2); // Elimina el valor con índice 2, en nuestro caso, el 4 que insertamos antes.
 {{< /highlight >}}
+
+
+## Iteradores de un arreglo {#iteradores-de-un-arreglo}
+
+Hay ciertos iteradores que podemos usar en un arreglo que nos ayudarán en algunos casos, como por ejemplo si quieremos recorrer un arreglo. Estos son:
+
+-   begin() -- Iterador que accede al primer valor del arreglo.
+-   end() -- Accede al final del arreglo.
+-   rbegin() -- Accede al ultimo elemento del arreglo
+-   rend -- Accede al inicio del arreglo

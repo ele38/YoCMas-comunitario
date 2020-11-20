@@ -2,7 +2,7 @@
 title = "Stacks (pilas)"
 author = ["Vicente Villarroel"]
 draft = false
-weight = 3003
+weight = 3005
 +++
 
 <div class="ox-hugo-toc toc">
