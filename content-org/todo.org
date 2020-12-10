@@ -1,0 +1,4 @@
+- [ ] Arreglar menús
+- [X] Hacerlo funcionar en todos los computadores
+- [ ] Arreglar subtitulos para que se entienda mejor
+- [ ] Hacer que la página principal sea la de 'Docs'
