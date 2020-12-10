@@ -1,8 +1,8 @@
 +++
 title = "Algoritmos de búsqueda"
-author = ["Vicente Villarroel"]
+author = ["Comunidad YoC+"]
 draft = false
-weight = 1002
+weight = 1003
 +++
 
 <div class="ox-hugo-toc toc">

@@ -1,6 +1,6 @@
 +++
 title = "Estructuras en forma de árbol"
-author = ["Vicente Villarroel"]
+author = ["Comunidad YoC+"]
 draft = false
 weight = 2002
 +++

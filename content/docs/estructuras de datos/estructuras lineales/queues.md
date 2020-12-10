@@ -1,6 +1,6 @@
 +++
 title = "Queues (colas)"
-author = ["Vicente Villarroel"]
+author = ["Comunidad YoC+"]
 draft = false
 weight = 3006
 +++

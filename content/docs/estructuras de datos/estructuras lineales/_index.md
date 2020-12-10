@@ -1,6 +1,6 @@
 +++
 title = "Estructuras lineales"
-author = ["Vicente Villarroel"]
+author = ["Comunidad YoC+"]
 draft = false
 weight = 2001
 +++

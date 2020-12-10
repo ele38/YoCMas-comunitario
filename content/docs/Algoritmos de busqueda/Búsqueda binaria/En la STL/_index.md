@@ -1,6 +1,6 @@
 +++
 title = "Uso mediante la librería STL"
-author = ["Vicente Villarroel"]
+author = ["Comunidad YoC+"]
 draft = false
 weight = 3002
 +++

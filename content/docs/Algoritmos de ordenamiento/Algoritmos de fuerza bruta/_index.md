@@ -1,6 +1,6 @@
 +++
 title = "Algoritmos de fuerza bruta"
-author = ["Vicente Villarroel"]
+author = ["Comunidad YoC+"]
 draft = false
 weight = 2002
 +++

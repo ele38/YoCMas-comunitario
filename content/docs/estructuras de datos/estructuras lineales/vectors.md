@@ -1,6 +1,6 @@
 +++
 title = "Vectors (vectores)"
-author = ["Vicente Villarroel"]
+author = ["Comunidad YoC+"]
 draft = false
 weight = 3004
 +++

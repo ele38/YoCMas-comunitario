@@ -1,6 +1,6 @@
 +++
 title = "Algoritmos de \"decrecer y conquistar\""
-author = ["Vicente Villarroel"]
+author = ["Comunidad YoC+"]
 draft = false
 weight = 2003
 +++

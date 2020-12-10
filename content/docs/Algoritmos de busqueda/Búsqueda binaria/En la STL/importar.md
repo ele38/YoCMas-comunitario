@@ -1,6 +1,6 @@
 +++
 title = "Importar"
-author = ["Vicente Villarroel"]
+author = ["Comunidad YoC+"]
 draft = false
 weight = 5001
 +++

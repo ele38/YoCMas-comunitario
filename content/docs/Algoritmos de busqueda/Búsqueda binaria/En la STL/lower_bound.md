@@ -1,6 +1,6 @@
 +++
 title = "upper_bound() (límite superior)"
-author = ["Vicente Villarroel"]
+author = ["Comunidad YoC+"]
 draft = false
 weight = 5004
 +++

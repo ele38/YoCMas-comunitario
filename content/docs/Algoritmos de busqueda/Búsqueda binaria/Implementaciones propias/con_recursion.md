@@ -1,6 +1,6 @@
 +++
 title = "Implementación recursiva"
-author = ["Vicente Villarroel"]
+author = ["Comunidad YoC+"]
 draft = false
 weight = 4002
 +++

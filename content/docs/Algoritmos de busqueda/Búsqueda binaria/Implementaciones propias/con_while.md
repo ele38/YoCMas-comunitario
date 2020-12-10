@@ -1,6 +1,6 @@
 +++
 title = "Implementación con while"
-author = ["Vicente Villarroel"]
+author = ["Comunidad YoC+"]
 draft = false
 weight = 4001
 +++

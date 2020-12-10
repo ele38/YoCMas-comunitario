@@ -1,8 +1,8 @@
 +++
 title = "Algoritmos de ordenamiento"
-author = ["Vicente Villarroel"]
+author = ["Comunidad YoC+"]
 draft = false
-weight = 1001
+weight = 1002
 +++
 
 <div class="ox-hugo-toc toc">

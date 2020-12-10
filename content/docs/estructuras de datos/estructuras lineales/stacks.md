@@ -1,6 +1,6 @@
 +++
 title = "Stacks (pilas)"
-author = ["Vicente Villarroel"]
+author = ["Comunidad YoC+"]
 draft = false
 weight = 3005
 +++

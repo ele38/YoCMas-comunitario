@@ -1,13 +1,15 @@
-#+TITLE: Estructuras de datos
+#+TITLE: Docs
 #+HUGO_BASE_DIR: ../
-#+HUGO_SECTION: ./
+#+HUGO_SECTION: ./docs
 #+HUGO_WEIGHT: auto
 #+OPTIONS: toc:1
+#+AUTHOR: Comunidad YoC+
 * Estructuras de datos
 :PROPERTIES:
 :EXPORT_HUGO_BUNDLE: ./estructuras de datos
 :HUGO_SECTION: ./edd
 :EXPORT_HUGO_MENU: :menu
+:EXPORT_FILE_NAME: index
 :END:
 ** Estructuras lineales
 :PROPERTIES:
@@ -352,6 +354,7 @@ Si, pero es de psicópata buscar dentro de ese map.
 :HUGO_SECTION: ./algoritmos_ordenamiento
 :EXPORT_HUGO_MENU: :menu
 :EXPORT_FILE_NAME: _index
+:EXPORT_COLLAPSIBLE: true
 :END:
 ** Acerca de
 :PROPERTIES:
@@ -616,3 +619,4 @@ Esta implementación nos retorna el índice del número a buscar dentro de un ar
   }
 #+END_SRC
 
+#+RESULTS:

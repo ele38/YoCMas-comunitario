@@ -1,6 +1,6 @@
 +++
 title = "Map (mapa, tabla de hashing)"
-author = ["Vicente Villarroel"]
+author = ["Comunidad YoC+"]
 draft = false
 weight = 3003
 +++

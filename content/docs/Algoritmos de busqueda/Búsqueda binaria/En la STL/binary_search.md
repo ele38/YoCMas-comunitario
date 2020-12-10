@@ -1,6 +1,6 @@
 +++
 title = "binary_search()"
-author = ["Vicente Villarroel"]
+author = ["Comunidad YoC+"]
 draft = false
 weight = 5002
 +++
