@@ -1,7 +1,7 @@
 logo = true
-logoText = "ZDoc"
+logoText = "YoC+"
 logoType = "short" # long, short
-description = "The ZDoc theme for Hugo example site."
+description = "Apuntes sobre lo visto en clases en el taller YoC+ avanzado"
 
 themeOptions = ["light", "dark"]
 
@@ -59,7 +59,7 @@ commento = false
   appKey = '你的appKey'
   notify = false  # mail notifier , https://github.com/xCss/Valine/wiki
   verify = false # Verification code
-  avatar = 'mm' 
+  avatar = 'mm'
   placeholder = '说点什么吧...'
   visitor = false
 
