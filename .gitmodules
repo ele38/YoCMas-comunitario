@@ -2,3 +2,6 @@
 	path = public
 	url = git@github.com:ele38/ele38.github.io.git
 	branch = master
+[submodule "themes/zdoc"]
+	path = themes/zdoc
+	url = https://github.com/zzossig/hugo-theme-zzo.git
