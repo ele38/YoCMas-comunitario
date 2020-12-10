@@ -3,6 +3,7 @@ title = "Implementaciones propias"
 author = ["Comunidad YoC+"]
 draft = false
 weight = 3003
+collapsible = true
 +++
 
 <div class="ox-hugo-toc toc">

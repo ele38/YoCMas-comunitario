@@ -3,6 +3,7 @@ title = "Uso mediante la librería STL"
 author = ["Comunidad YoC+"]
 draft = false
 weight = 3002
+collapsible = true
 +++
 
 <div class="ox-hugo-toc toc">

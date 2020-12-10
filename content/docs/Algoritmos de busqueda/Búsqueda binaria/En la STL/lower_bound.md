@@ -2,7 +2,7 @@
 title = "upper_bound() (límite superior)"
 author = ["Comunidad YoC+"]
 draft = false
-weight = 5004
+weight = 4003
 +++
 
 La función upper\_bound() de la librería STL nos entrega un puntero a un valor

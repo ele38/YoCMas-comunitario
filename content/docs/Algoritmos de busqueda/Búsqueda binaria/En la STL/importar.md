@@ -2,7 +2,7 @@
 title = "Importar"
 author = ["Comunidad YoC+"]
 draft = false
-weight = 5001
+weight = 4001
 +++
 
 Podemos directamente importar toda la stl o podemos importar la librería <algorithm> de la

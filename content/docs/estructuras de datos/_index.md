@@ -3,6 +3,7 @@ title = "Estructuras de datos"
 author = ["Comunidad YoC+"]
 draft = false
 weight = 1001
+collapsible = true
 +++
 
 <div class="ox-hugo-toc toc">

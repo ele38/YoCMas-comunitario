@@ -2,7 +2,7 @@
 title = "binary_search()"
 author = ["Comunidad YoC+"]
 draft = false
-weight = 5002
+weight = 4002
 +++
 
 La librería STL ya incluye binary search, si queremos saber si el valor

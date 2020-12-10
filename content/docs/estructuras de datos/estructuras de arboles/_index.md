@@ -3,6 +3,7 @@ title = "Estructuras en forma de árbol"
 author = ["Comunidad YoC+"]
 draft = false
 weight = 2002
+collapsible = true
 +++
 
 <div class="ox-hugo-toc toc">

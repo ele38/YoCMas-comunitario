@@ -3,6 +3,7 @@ title = "Estructuras lineales"
 author = ["Comunidad YoC+"]
 draft = false
 weight = 2001
+collapsible = true
 +++
 
 <div class="ox-hugo-toc toc">

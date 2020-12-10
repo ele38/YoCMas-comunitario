@@ -3,6 +3,7 @@ title = "Algoritmos de \"decrecer y conquistar\""
 author = ["Comunidad YoC+"]
 draft = false
 weight = 2003
+collapsible = true
 +++
 
 <div class="ox-hugo-toc toc">

@@ -3,6 +3,7 @@ title = "Algoritmos de búsqueda"
 author = ["Comunidad YoC+"]
 draft = false
 weight = 1003
+collapsible = true
 +++
 
 <div class="ox-hugo-toc toc">
