@@ -1,8 +1,8 @@
 [submodule "public"]
 	path = public
-	url = github.com/ele38/ele38.github.io.git
+	url = git@github.com:ele38/ele38.github.io.git
 	branch = master
 [submodule "themes/zdoc"]
 	path = themes/zdoc
-	url = github.com/zzossig/hugo-theme-zdoc
+	url = git@github.com:zzossig/hugo-theme-zdoc
 	branch = master
